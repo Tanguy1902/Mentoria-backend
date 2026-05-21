@@ -1,0 +1,27 @@
+# FastAPI & server
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.18
+
+# LLM client (OpenAI-compatible SDK for OpenRouter)
+openai==1.58.1
+
+# Document parsing
+PyMuPDF==1.25.3
+python-pptx==1.0.2
+
+# Vector database
+chromadb==0.6.3
+
+# Tokenization for chunking
+tiktoken==0.8.0
+
+# Configuration
+pydantic-settings==2.7.1
+python-dotenv==1.0.1
+
+# HTTP client
+httpx==0.28.1
+
+# Utilities
+aiofiles==24.1.0

@@ -1,0 +1,34 @@
+[
+  {
+    "question": "Est-ce que vous pouvez developper MERISE?",
+    "type": "methodologie",
+    "role": "president",
+    "niveau": "licence",
+    "domaine": "Informatique",
+    "tags": [
+      "MERISE, Méthodologie"
+    ],
+    "frequence": 0.5,
+    "difficulte": 3
+  },
+  {
+    "question": "Developper MERISE",
+    "type": "methodologie",
+    "role": "president",
+    "niveau": "licence",
+    "domaine": "Informatique",
+    "tags": [],
+    "frequence": 1.0,
+    "difficulte": 3
+  },
+  {
+    "question": "Developper HTML, http, https",
+    "type": "methodologie",
+    "role": "president",
+    "niveau": "licence",
+    "domaine": "Informatique",
+    "tags": [],
+    "frequence": 0.5,
+    "difficulte": 3
+  }
+]

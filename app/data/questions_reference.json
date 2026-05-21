@@ -1,0 +1,2576 @@
+[
+  {
+    "question": "Pourquoi avoir choisi cette méthode plutôt qu'une autre ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["choix", "justification", "comparaison"],
+    "frequence": 0.85,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels sont les critères qui ont guidé le choix de votre architecture logicielle ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["architecture", "conception", "justification"],
+    "frequence": 0.82,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous validé que votre solution répond réellement au problème posé ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["validation", "pertinence", "verification"],
+    "frequence": 0.90,
+    "difficulte": 3
+  },
+  {
+    "question": "Pouvez-vous expliquer la complexité algorithmique de votre solution ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["complexite", "performance", "algorithme"],
+    "frequence": 0.78,
+    "difficulte": 4
+  },
+  {
+    "question": "Quelle est la contribution originale de votre travail par rapport à l'existant ?",
+    "type": "originalite",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["contribution", "nouveaute", "etat_de_lart"],
+    "frequence": 0.92,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous constitué votre jeu de données de test ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["donnees", "test", "echantillonnage"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelles sont les limitations principales de votre approche ?",
+    "type": "argumentation",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["limites", "autocritique", "honnetete"],
+    "frequence": 0.88,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre système se comporte-t-il en cas de montée en charge ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["scalabilite", "performance", "charge"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+  {
+    "question": "Avez-vous comparé vos résultats avec d'autres travaux similaires ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["comparaison", "benchmark", "etat_de_lart"],
+    "frequence": 0.85,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthodologie de développement avez-vous suivie et pourquoi ?",
+    "type": "methodologie",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["agile", "methodologie_dev", "organisation"],
+    "frequence": 0.70,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment garantissez-vous la sécurité des données dans votre application ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["securite", "protection_donnees", "confidentialite"],
+    "frequence": 0.80,
+    "difficulte": 4
+  },
+  {
+    "question": "Pourquoi ce framework particulier plutôt qu'un autre pour le développement ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["framework", "choix_technique", "justification"],
+    "frequence": 0.83,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous géré la qualité du code tout au long du projet ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["qualite_code", "tests", "bonnes_pratiques"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels tests avez-vous effectués pour valider le bon fonctionnement du système ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["tests", "validation", "verification"],
+    "frequence": 0.87,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelles sont les perspectives d'évolution de votre travail ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["perspectives", "evolution", "futur"],
+    "frequence": 0.90,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment votre solution s'intègre-t-elle dans l'écosystème existant de l'entreprise ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["integration", "compatibilite", "deploiement"],
+    "frequence": 0.65,
+    "difficulte": 3
+  },
+  {
+    "question": "Sur quels critères objectifs avez-vous évalué la performance de votre solution ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["metriques", "evaluation", "objectivite"],
+    "frequence": 0.82,
+    "difficulte": 3
+  },
+  {
+    "question": "Pouvez-vous justifier le choix de votre base de données ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["base_de_donnees", "choix", "justification"],
+    "frequence": 0.78,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous traité les cas limites et les erreurs dans votre système ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["gestion_erreurs", "robustesse", "cas_limites"],
+    "frequence": 0.74,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la fiabilité de vos sources bibliographiques ?",
+    "type": "bibliographie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["sources", "references", "fiabilite"],
+    "frequence": 0.72,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous structuré votre revue de littérature et sur quels critères ?",
+    "type": "bibliographie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["revue_litterature", "structuration", "criteres"],
+    "frequence": 0.70,
+    "difficulte": 3
+  },
+  {
+    "question": "Votre problématique est-elle clairement définie et suffisamment délimitée ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["problematique", "delimitation", "clarte"],
+    "frequence": 0.88,
+    "difficulte": 3
+  },
+  {
+    "question": "Quel est le protocole expérimental que vous avez suivi pour vos tests ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["protocole", "experimentation", "rigueur"],
+    "frequence": 0.76,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre modèle de données reflète-t-il les besoins métier identifiés ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["modele_donnees", "besoins", "adequation"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels compromis avez-vous dû faire durant le développement et pourquoi ?",
+    "type": "argumentation",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["compromis", "decisions", "contraintes"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous assuré la maintenabilité de votre code ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["maintenabilite", "documentation", "code_propre"],
+    "frequence": 0.65,
+    "difficulte": 3
+  },
+  {
+    "question": "Pouvez-vous décrire le flux de données principal de votre application ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["flux_donnees", "architecture", "comprehension"],
+    "frequence": 0.80,
+    "difficulte": 2
+  },
+  {
+    "question": "Avez-vous pris en compte les aspects d'accessibilité dans votre interface ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["accessibilite", "ux", "inclusion"],
+    "frequence": 0.45,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment votre travail contribue-t-il à résoudre un problème concret ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["impact", "utilite", "concret"],
+    "frequence": 0.85,
+    "difficulte": 2
+  },
+  {
+    "question": "Quelles sont les hypothèses de base de votre travail et sont-elles justifiées ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["hypotheses", "fondements", "justification"],
+    "frequence": 0.78,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous géré le versionnement de votre projet ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["git", "versionnement", "collaboration"],
+    "frequence": 0.55,
+    "difficulte": 1
+  },
+  {
+    "question": "Votre solution est-elle déployable en production ? Quels seraient les prérequis ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["deploiement", "production", "prerequis"],
+    "frequence": 0.70,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous identifié et analysé les besoins des utilisateurs ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["besoins", "analyse", "utilisateurs"],
+    "frequence": 0.80,
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est l'impact de votre choix technologique sur la performance globale ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["technologie", "performance", "impact"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment gérez-vous la cohérence des données en cas de pannes ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["coherence", "tolerance_pannes", "fiabilite"],
+    "frequence": 0.60,
+    "difficulte": 4
+  },
+  {
+    "question": "Quelle est votre stratégie de sauvegarde et de récupération des données ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["sauvegarde", "recuperation", "resilience"],
+    "frequence": 0.55,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous documenté votre API pour les développeurs tiers ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["documentation", "api", "interoperabilite"],
+    "frequence": 0.62,
+    "difficulte": 2
+  },
+  {
+    "question": "Quels design patterns avez-vous utilisés et quelle était leur pertinence ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["design_patterns", "conception", "pertinence"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous mesuré la satisfaction des utilisateurs finaux ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["satisfaction", "utilisateurs", "feedback"],
+    "frequence": 0.58,
+    "difficulte": 2
+  },
+  {
+    "question": "Pouvez-vous expliquer votre diagramme de classes et les relations entre entités ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["uml", "diagramme_classes", "conception"],
+    "frequence": 0.82,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous traité la problématique de la concurrence d'accès ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["concurrence", "synchronisation", "acces"],
+    "frequence": 0.55,
+    "difficulte": 4
+  },
+  {
+    "question": "La taille de votre échantillon est-elle représentative ? Comment le justifiez-vous ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["echantillon", "representativite", "statistiques"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels risques avez-vous identifiés dans votre projet et comment les avez-vous mitigés ?",
+    "type": "methodologie",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["risques", "mitigation", "gestion_projet"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre solution respecte-t-elle les principes SOLID ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["solid", "principes", "qualite_code"],
+    "frequence": 0.65,
+    "difficulte": 3
+  },
+  {
+    "question": "Avez-vous effectué des tests de charge ? Quels ont été les résultats ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["tests_charge", "performance", "scalabilite"],
+    "frequence": 0.60,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous assuré la portabilité de votre solution ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["portabilite", "compatibilite", "multiplateforme"],
+    "frequence": 0.50,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est votre stratégie de gestion des dépendances externes ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["dependances", "maintenance", "risques"],
+    "frequence": 0.52,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous structuré la présentation de vos résultats ?",
+    "type": "presentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["presentation", "structuration", "clarte"],
+    "frequence": 0.75,
+    "difficulte": 2
+  },
+  {
+    "question": "Vos résultats sont-ils reproductibles ? Comment un autre chercheur pourrait-il les vérifier ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["reproductibilite", "verification", "transparence"],
+    "frequence": 0.78,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous planifié et géré votre calendrier de projet ?",
+    "type": "methodologie",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["planification", "gestion_temps", "organisation"],
+    "frequence": 0.62,
+    "difficulte": 1
+  },
+  {
+    "question": "Quelles sont les implications éthiques de votre travail ?",
+    "type": "ethique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["ethique", "responsabilite", "impact_social"],
+    "frequence": 0.58,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre solution gère-t-elle l'internationalisation et la localisation ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["i18n", "localisation", "multilangue"],
+    "frequence": 0.40,
+    "difficulte": 2
+  },
+  {
+    "question": "Pouvez-vous démontrer un cas d'utilisation complet de votre système ?",
+    "type": "presentation",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["demonstration", "cas_utilisation", "fonctionnel"],
+    "frequence": 0.88,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous défini les priorités entre les fonctionnalités à développer ?",
+    "type": "methodologie",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["priorisation", "fonctionnalites", "gestion_projet"],
+    "frequence": 0.65,
+    "difficulte": 2
+  },
+  {
+    "question": "Quel modèle d'apprentissage automatique avez-vous choisi et pourquoi celui-ci ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["machine_learning", "modele", "choix"],
+    "frequence": 0.75,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous traité le problème du surapprentissage dans votre modèle ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["overfitting", "regularisation", "generalisation"],
+    "frequence": 0.70,
+    "difficulte": 4
+  },
+  {
+    "question": "Quelle est la précision de votre modèle et comment l'avez-vous calculée ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["precision", "metriques", "evaluation"],
+    "frequence": 0.82,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment vous êtes-vous assuré de la qualité et de la propreté de vos données ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["nettoyage_donnees", "qualite", "preprocessing"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels sont les indicateurs clés de performance (KPI) de votre solution ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["kpi", "indicateurs", "mesure"],
+    "frequence": 0.70,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous assuré la conformité RGPD de votre application ?",
+    "type": "ethique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["rgpd", "conformite", "donnees_personnelles"],
+    "frequence": 0.62,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la différence fondamentale entre votre approche et l'état de l'art ?",
+    "type": "originalite",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["originalite", "etat_de_lart", "difference"],
+    "frequence": 0.85,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous géré les contraintes de temps réel de votre système ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["temps_reel", "latence", "performance"],
+    "frequence": 0.55,
+    "difficulte": 4
+  },
+  {
+    "question": "Pouvez-vous expliquer le processus de déploiement de votre application ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["deploiement", "ci_cd", "devops"],
+    "frequence": 0.68,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous assuré la séparation des préoccupations dans votre code ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["separation_preoccupations", "architecture", "modulaire"],
+    "frequence": 0.60,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels outils de monitoring avez-vous mis en place pour surveiller le système ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["monitoring", "surveillance", "observabilite"],
+    "frequence": 0.48,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous sélectionné les variables pertinentes pour votre analyse ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["selection_variables", "pertinence", "analyse"],
+    "frequence": 0.70,
+    "difficulte": 3
+  },
+  {
+    "question": "Votre interface utilisateur a-t-elle été testée auprès de vrais utilisateurs ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["tests_utilisateurs", "ux", "feedback"],
+    "frequence": 0.62,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous géré l'authentification et l'autorisation des utilisateurs ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["authentification", "autorisation", "securite"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est l'empreinte écologique de votre solution numérique ?",
+    "type": "ethique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["ecologie", "green_it", "impact_environnemental"],
+    "frequence": 0.35,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous procédé pour la collecte des exigences fonctionnelles ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["exigences", "specification", "cahier_charges"],
+    "frequence": 0.75,
+    "difficulte": 2
+  },
+  {
+    "question": "Quelles métriques avez-vous utilisées pour évaluer la qualité de votre modèle IA ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["metriques_ia", "f1_score", "evaluation_modele"],
+    "frequence": 0.75,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment votre système protège-t-il contre les injections SQL ou XSS ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["injection", "xss", "securite_web"],
+    "frequence": 0.60,
+    "difficulte": 3
+  },
+  {
+    "question": "Avez-vous envisagé une architecture microservices ? Pourquoi ou pourquoi pas ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["microservices", "architecture", "scalabilite"],
+    "frequence": 0.58,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous validé votre modèle conceptuel de données ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["modele_conceptuel", "validation", "mcd"],
+    "frequence": 0.68,
+    "difficulte": 2
+  },
+  {
+    "question": "Quelles sont les dépendances critiques de votre projet et comment les gérez-vous ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["dependances", "risque", "criticite"],
+    "frequence": 0.55,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous traité les données manquantes ou incomplètes ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["donnees_manquantes", "imputation", "traitement"],
+    "frequence": 0.65,
+    "difficulte": 3
+  },
+  {
+    "question": "Votre solution est-elle conforme aux standards de l'industrie concernée ?",
+    "type": "pratique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["standards", "normes", "conformite"],
+    "frequence": 0.55,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous géré la communication au sein de votre équipe de projet ?",
+    "type": "methodologie",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["communication", "equipe", "collaboration"],
+    "frequence": 0.50,
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le coût estimé de maintenance annuelle de votre solution ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["cout", "maintenance", "tco"],
+    "frequence": 0.45,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous abordé le problème de la latence réseau dans votre application ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["latence", "reseau", "optimisation"],
+    "frequence": 0.52,
+    "difficulte": 3
+  },
+  {
+    "question": "Pouvez-vous expliquer la logique métier implémentée dans le module principal ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["logique_metier", "implementation", "comprehension"],
+    "frequence": 0.78,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment la cohérence entre vos diagrammes UML et le code final est-elle assurée ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["uml", "coherence", "specification_code"],
+    "frequence": 0.65,
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le taux de couverture de vos tests unitaires ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["couverture_tests", "tests_unitaires", "qualite"],
+    "frequence": 0.62,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous sécurisé les communications entre les composants de votre système ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["https", "chiffrement", "securite_communication"],
+    "frequence": 0.58,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment justifiez-vous la pertinence de votre sujet dans le contexte actuel ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["pertinence", "contexte", "actualite"],
+    "frequence": 0.85,
+    "difficulte": 2
+  },
+  {
+    "question": "Quels algorithmes de chiffrement avez-vous utilisés pour protéger les données sensibles ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["chiffrement", "algorithme", "donnees_sensibles"],
+    "frequence": 0.50,
+    "difficulte": 4
+  },
+  {
+    "question": "En quoi votre travail diffère-t-il d'un simple projet technique sans dimension recherche ?",
+    "type": "originalite",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["dimension_recherche", "academique", "rigueur"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous validé l'ergonomie de votre interface utilisateur ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["ergonomie", "ux", "validation"],
+    "frequence": 0.60,
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est votre stratégie de mise à jour et de versionnement de l'API ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["api_versioning", "evolution", "compatibilite"],
+    "frequence": 0.48,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre approche se positionne-t-elle face aux solutions commerciales existantes ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["concurrence", "positionnement", "valeur_ajoutee"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Avez-vous pris en compte la dette technique dans votre planification ?",
+    "type": "methodologie",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["dette_technique", "planification", "refactoring"],
+    "frequence": 0.45,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous traité les problèmes de compatibilité entre navigateurs ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["compatibilite", "navigateurs", "cross_browser"],
+    "frequence": 0.52,
+    "difficulte": 2
+  },
+  {
+    "question": "Quels sont les biais potentiels dans vos données d'entraînement ?",
+    "type": "ethique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["biais", "donnees", "equite"],
+    "frequence": 0.60,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous procédé pour le choix de vos hyperparamètres ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["hyperparametres", "tuning", "optimisation"],
+    "frequence": 0.68,
+    "difficulte": 4
+  },
+  {
+    "question": "Quelle stratégie de cache avez-vous implémentée et pourquoi ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["cache", "performance", "strategie"],
+    "frequence": 0.50,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre solution réagit-elle à des entrées invalides ou malveillantes ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["validation_entree", "robustesse", "securite"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Quel retour les utilisateurs pilotes ont-ils fait sur votre solution ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["retour_utilisateur", "pilote", "amelioration"],
+    "frequence": 0.55,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment votre travail peut-il être étendu pour d'autres domaines d'application ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["generalisation", "transferabilite", "extension"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Pourquoi n'avoir pas utilisé une approche par conteneurisation (Docker) ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["docker", "conteneurisation", "justification"],
+    "frequence": 0.55,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous évalué la complexité de votre projet en termes de points de fonction ?",
+    "type": "methodologie",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["complexite_projet", "estimation", "points_fonction"],
+    "frequence": 0.40,
+    "difficulte": 3
+  },
+  {
+    "question": "Vos conclusions sont-elles cohérentes avec les résultats présentés ?",
+    "type": "argumentation",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["conclusions", "coherence", "resultats"],
+    "frequence": 0.85,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment assurez-vous la traçabilité des exigences jusqu'au code implémenté ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["tracabilite", "exigences", "implementation"],
+    "frequence": 0.55,
+    "difficulte": 3
+  },
+  {
+    "question": "Quel est l'impact du choix de la licence logicielle sur l'utilisation de votre code ?",
+    "type": "ethique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["licence", "open_source", "propriete_intellectuelle"],
+    "frequence": 0.38,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous assuré la rétrocompatibilité lors des évolutions de votre système ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["retrocompatibilite", "evolution", "migration"],
+    "frequence": 0.45,
+    "difficulte": 3
+  },
+  {
+    "question": "En quoi la structure de votre mémoire reflète-t-elle une démarche scientifique ?",
+    "type": "presentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["structure", "demarche_scientifique", "rigueur"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous géré les conflits de fusion dans votre système de versionnement ?",
+    "type": "methodologie",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["git", "conflits", "collaboration"],
+    "frequence": 0.42,
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est la volumétrie des données traitées et comment impacte-t-elle les performances ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["volumetrie", "big_data", "performance"],
+    "frequence": 0.62,
+    "difficulte": 3
+  },
+  {
+    "question": "Pourquoi avoir choisi une API REST plutôt que GraphQL ou gRPC ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["api", "rest", "graphql", "choix"],
+    "frequence": 0.58,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre système gère-t-il les mises à jour sans interruption de service ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["zero_downtime", "deploiement", "disponibilite"],
+    "frequence": 0.42,
+    "difficulte": 4
+  },
+  {
+    "question": "Avez-vous effectué une analyse de la valeur ajoutée de chaque fonctionnalité ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["valeur_ajoutee", "priorisation", "roi"],
+    "frequence": 0.48,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment les normes d'accessibilité WCAG sont-elles respectées dans votre interface ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["wcag", "accessibilite", "normes"],
+    "frequence": 0.35,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous géré la pagination et le chargement progressif de grandes listes ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["pagination", "performance", "ux"],
+    "frequence": 0.52,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous validé que votre algorithme converge vers une solution optimale ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["convergence", "optimalite", "algorithme"],
+    "frequence": 0.58,
+    "difficulte": 5
+  },
+  {
+    "question": "Expliquez comment vous avez réparti les rôles et responsabilités au sein de l'équipe.",
+    "type": "methodologie",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["roles", "responsabilites", "equipe"],
+    "frequence": 0.55,
+    "difficulte": 1
+  },
+  {
+    "question": "Votre solution respecte-t-elle le principe de moindre privilège en termes de droits d'accès ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["moindre_privilege", "droits_acces", "securite"],
+    "frequence": 0.48,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre solution pourrait-elle fonctionner hors ligne ou en mode dégradé ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["offline", "mode_degrade", "resilience"],
+    "frequence": 0.42,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment mesurez-vous le retour sur investissement de votre solution ?",
+    "type": "pratique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["roi", "retour_investissement", "valeur"],
+    "frequence": 0.52,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous intégré les retours de votre encadrant dans l'amélioration du travail ?",
+    "type": "methodologie",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["feedback", "amelioration_continue", "encadrement"],
+    "frequence": 0.60,
+    "difficulte": 1
+  },
+  {
+    "question": "Comment gérez-vous la journalisation (logging) dans votre application ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["logging", "debug", "observabilite"],
+    "frequence": 0.50,
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est la complexité spatiale de votre algorithme et comment l'optimiser ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["complexite_spatiale", "memoire", "optimisation"],
+    "frequence": 0.55,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment votre solution respecte-t-elle les bonnes pratiques de l'architecture hexagonale ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["architecture_hexagonale", "ports_adaptateurs", "clean_architecture"],
+    "frequence": 0.45,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment la qualité de la rédaction de votre mémoire contribue-t-elle à la compréhension ?",
+    "type": "presentation",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["redaction", "clarte", "qualite_ecrite"],
+    "frequence": 0.72,
+    "difficulte": 2
+  },
+  {
+    "question": "Quelles leçons tirées de ce projet appliqueriez-vous dans un futur projet ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["lecons", "retrospective", "experience"],
+    "frequence": 0.65,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment votre travail adresse-t-il spécifiquement les besoins du contexte malgache ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["contexte_local", "adaptation", "pertinence"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Avez-vous considéré les contraintes de connectivité internet limitée dans votre conception ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["connectivite", "contraintes", "adaptation_locale"],
+    "frequence": 0.55,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment justifiez-vous l'absence de tests d'intégration dans votre validation ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["tests_integration", "justification", "lacunes"],
+    "frequence": 0.55,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous évalué l'utilisabilité de votre solution du point de vue de l'expérience utilisateur ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "informatique",
+    "tags": ["utilisabilite", "ux_evaluation", "heuristiques"],
+    "frequence": 0.58,
+    "difficulte": 2
+  },
+
+  {
+    "question": "Quelle est la stratégie de positionnement concurrentiel que vous recommandez et sur quels critères ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["positionnement", "concurrence", "strategie"],
+    "frequence": 0.82,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous analysé la chaîne de valeur de l'entreprise étudiée ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["chaine_valeur", "porter", "analyse_strategique"],
+    "frequence": 0.78,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels outils de diagnostic stratégique avez-vous mobilisés (SWOT, PESTEL, 5 forces) ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["swot", "pestel", "diagnostic"],
+    "frequence": 0.85,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous évalué la viabilité financière du projet proposé ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["viabilite", "business_plan", "finance"],
+    "frequence": 0.80,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la pertinence de votre analyse des parties prenantes ?",
+    "type": "argumentation",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["parties_prenantes", "stakeholders", "gouvernance"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous mesuré l'impact de la stratégie RH sur la performance organisationnelle ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["rh", "performance", "impact"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthodologie avez-vous utilisée pour l'étude de marché ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["etude_marche", "enquete", "methodologie"],
+    "frequence": 0.82,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment le tableau de bord prospectif (BSC) a-t-il été construit et utilisé ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["balanced_scorecard", "pilotage", "indicateurs"],
+    "frequence": 0.62,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels modèles de leadership avez-vous analysés dans votre étude ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["leadership", "management", "modeles"],
+    "frequence": 0.65,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous évalué le climat social au sein de l'organisation ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["climat_social", "enquete", "organisation"],
+    "frequence": 0.60,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment le plan de financement que vous proposez est-il réaliste au vu du contexte économique actuel ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["financement", "realisme", "contexte_economique"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+  {
+    "question": "Quelle est la valeur actuelle nette (VAN) du projet et comment l'interprétez-vous ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "gestion",
+    "tags": ["van", "rentabilite", "investissement"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+
+  {
+    "question": "Sur quel fondement juridique repose votre analyse du litige ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "droit",
+    "tags": ["fondement_juridique", "base_legale", "litige"],
+    "frequence": 0.88,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous articulé les sources de droit national et international dans votre argumentation ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "droit",
+    "tags": ["sources_droit", "international", "articulation"],
+    "frequence": 0.78,
+    "difficulte": 4
+  },
+  {
+    "question": "Quelle jurisprudence avez-vous mobilisée pour étayer votre raisonnement ?",
+    "type": "bibliographie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "droit",
+    "tags": ["jurisprudence", "precedent", "citation"],
+    "frequence": 0.85,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre interprétation est-elle compatible avec le principe de hiérarchie des normes ?",
+    "type": "argumentation",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "droit",
+    "tags": ["hierarchie_normes", "constitutionnalite", "coherence"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+  {
+    "question": "Quelles sont les limites de l'application du droit positif dans le cas que vous étudiez ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "droit",
+    "tags": ["droit_positif", "limites", "lacunes"],
+    "frequence": 0.68,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous traité les conflits de lois dans votre analyse comparative ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "droit",
+    "tags": ["conflit_lois", "droit_compare", "resolution"],
+    "frequence": 0.62,
+    "difficulte": 4
+  },
+  {
+    "question": "Quels droits fondamentaux sont en jeu dans votre problématique et comment sont-ils protégés ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "droit",
+    "tags": ["droits_fondamentaux", "protection", "constitution"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+  {
+    "question": "Votre proposition de réforme est-elle compatible avec les engagements internationaux du pays ?",
+    "type": "argumentation",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "droit",
+    "tags": ["reforme", "engagements_internationaux", "compatibilite"],
+    "frequence": 0.58,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous analysé l'effectivité de la norme juridique étudiée ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "droit",
+    "tags": ["effectivite", "application", "norme"],
+    "frequence": 0.65,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la portée de l'arrêt de la Cour que vous citez comme référence ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "droit",
+    "tags": ["arret", "portee", "interpretation"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+
+  {
+    "question": "Quel est le protocole éthique que vous avez suivi pour votre étude clinique ?",
+    "type": "ethique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["ethique_medicale", "protocole", "consentement"],
+    "frequence": 0.92,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous obtenu le consentement éclairé des participants à votre étude ?",
+    "type": "ethique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["consentement_eclaire", "participants", "ethique"],
+    "frequence": 0.90,
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est la puissance statistique de votre étude et comment l'avez-vous calculée ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["puissance_statistique", "calcul_echantillon", "rigueur"],
+    "frequence": 0.82,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous contrôlé les biais de sélection dans votre étude ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["biais_selection", "controle", "validite"],
+    "frequence": 0.85,
+    "difficulte": 4
+  },
+  {
+    "question": "Quels sont les critères d'inclusion et d'exclusion de votre population d'étude ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["criteres_inclusion", "population", "selection"],
+    "frequence": 0.88,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment vos résultats se comparent-ils aux données épidémiologiques nationales ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["epidemiologie", "comparaison", "donnees_nationales"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la significativité statistique de vos résultats (valeur p) ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["valeur_p", "significativite", "statistiques"],
+    "frequence": 0.85,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre protocole thérapeutique proposé se conforme-t-il aux recommandations de l'OMS ?",
+    "type": "technique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["oms", "recommandations", "protocole_therapeutique"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels effets indésirables avez-vous observés et comment les avez-vous documentés ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["effets_indesirables", "pharmacovigilance", "documentation"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre étude prend-elle en compte les déterminants sociaux de la santé ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["determinants_sociaux", "sante_publique", "inegalites"],
+    "frequence": 0.62,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la validité externe de vos résultats — sont-ils généralisables ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "medecine",
+    "tags": ["validite_externe", "generalisabilite", "limites"],
+    "frequence": 0.78,
+    "difficulte": 4
+  },
+
+  {
+    "question": "Quel modèle économétrique avez-vous utilisé et quelles en sont les hypothèses sous-jacentes ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "economie",
+    "tags": ["econometrie", "modele", "hypotheses"],
+    "frequence": 0.82,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous traité le problème d'endogénéité dans votre modèle ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "economie",
+    "tags": ["endogeneite", "variables_instrumentales", "biais"],
+    "frequence": 0.72,
+    "difficulte": 5
+  },
+  {
+    "question": "Comment avez-vous vérifié la stationnarité de vos séries temporelles ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "economie",
+    "tags": ["stationnarite", "series_temporelles", "test_adf"],
+    "frequence": 0.75,
+    "difficulte": 4
+  },
+  {
+    "question": "Quelle est l'élasticité estimée et comment l'interprétez-vous dans le contexte malgache ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "economie",
+    "tags": ["elasticite", "interpretation", "contexte_local"],
+    "frequence": 0.68,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment le cadre théorique keynésien/néoclassique justifie-t-il votre hypothèse ?",
+    "type": "argumentation",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "economie",
+    "tags": ["theorie_economique", "cadre_theorique", "justification"],
+    "frequence": 0.78,
+    "difficulte": 3
+  },
+  {
+    "question": "Avez-vous effectué des tests de robustesse sur vos estimations ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "economie",
+    "tags": ["robustesse", "sensibilite", "fiabilite"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment votre analyse prend-elle en compte les externalités économiques ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "economie",
+    "tags": ["externalites", "cout_social", "marche"],
+    "frequence": 0.65,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelles sont les implications de politique économique de vos résultats ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "economie",
+    "tags": ["politique_economique", "recommandations", "implications"],
+    "frequence": 0.80,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous pris en compte l'inflation dans vos calculs de valeurs réelles ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "economie",
+    "tags": ["inflation", "deflateur", "valeurs_reelles"],
+    "frequence": 0.62,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la fiabilité des données macroéconomiques que vous avez utilisées ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "economie",
+    "tags": ["fiabilite_donnees", "sources_statistiques", "qualite"],
+    "frequence": 0.70,
+    "difficulte": 2
+  },
+
+  {
+    "question": "Quel cadre pédagogique théorique sous-tend votre dispositif d'enseignement ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sciences_education",
+    "tags": ["cadre_pedagogique", "theorie_apprentissage", "fondements"],
+    "frequence": 0.85,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous mesuré les acquis d'apprentissage des élèves ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "sciences_education",
+    "tags": ["evaluation", "acquis", "mesure"],
+    "frequence": 0.82,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle approche avez-vous adoptée : constructivisme, behaviorisme ou socioconstructivisme ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sciences_education",
+    "tags": ["constructivisme", "approche_pedagogique", "choix"],
+    "frequence": 0.78,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre dispositif prend-il en compte la différenciation pédagogique ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "sciences_education",
+    "tags": ["differenciation", "inclusion", "adaptation"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels instruments de collecte de données avez-vous utilisés (questionnaires, observations, entretiens) ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sciences_education",
+    "tags": ["instruments", "collecte_donnees", "triangulation"],
+    "frequence": 0.85,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous validé la fiabilité de votre grille d'observation ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "sciences_education",
+    "tags": ["grille_observation", "fiabilite", "validation"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels sont les effets observés de votre dispositif sur la motivation des apprenants ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sciences_education",
+    "tags": ["motivation", "engagement", "effets"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre recherche contribue-t-elle à l'amélioration des pratiques enseignantes ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "sciences_education",
+    "tags": ["pratiques_enseignantes", "amelioration", "impact"],
+    "frequence": 0.78,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous contrôlé l'effet Hawthorne dans votre expérimentation en classe ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "sciences_education",
+    "tags": ["effet_hawthorne", "biais", "controle"],
+    "frequence": 0.55,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment la formation des enseignants est-elle prise en compte dans votre modèle ?",
+    "type": "pratique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sciences_education",
+    "tags": ["formation_enseignants", "competences", "deploiement"],
+    "frequence": 0.65,
+    "difficulte": 2
+  },
+
+  {
+    "question": "Comment avez-vous dimensionné les éléments structuraux de votre ouvrage ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "genie_civil",
+    "tags": ["dimensionnement", "structure", "calcul"],
+    "frequence": 0.88,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelles normes de construction avez-vous appliquées (Eurocode, BAEL, RPA) ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "genie_civil",
+    "tags": ["normes", "eurocode", "reglementation"],
+    "frequence": 0.85,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous pris en compte le risque sismique dans votre conception ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "genie_civil",
+    "tags": ["sismique", "risque", "parasismique"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+  {
+    "question": "Quel logiciel de modélisation avez-vous utilisé et comment avez-vous validé les résultats ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "genie_civil",
+    "tags": ["modelisation", "logiciel", "validation"],
+    "frequence": 0.80,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous réalisé l'étude géotechnique du sol de fondation ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "genie_civil",
+    "tags": ["geotechnique", "sol", "fondation"],
+    "frequence": 0.78,
+    "difficulte": 3
+  },
+  {
+    "question": "Quel est le coût estimé du projet et comment avez-vous établi le devis quantitatif ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "genie_civil",
+    "tags": ["cout", "devis", "estimation"],
+    "frequence": 0.82,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous intégré les contraintes environnementales dans votre projet ?",
+    "type": "ethique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "genie_civil",
+    "tags": ["environnement", "impact", "durabilite"],
+    "frequence": 0.65,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la durée de vie estimée de l'ouvrage et quels facteurs la conditionnent ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "genie_civil",
+    "tags": ["duree_vie", "durabilite", "maintenance"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous vérifié la stabilité de l'ouvrage sous différentes combinaisons de charges ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "genie_civil",
+    "tags": ["stabilite", "charges", "combinaisons"],
+    "frequence": 0.78,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment le planning d'exécution des travaux a-t-il été établi ?",
+    "type": "pratique",
+    "role": "directeur",
+    "niveau": "master",
+    "domaine": "genie_civil",
+    "tags": ["planning", "execution", "gantt"],
+    "frequence": 0.70,
+    "difficulte": 2
+  },
+
+  {
+    "question": "Quel est le rendement agronomique observé et comment se compare-t-il aux témoins ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "agronomie",
+    "tags": ["rendement", "temoin", "comparaison"],
+    "frequence": 0.85,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous conçu votre dispositif expérimental (blocs randomisés, split-plot) ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "agronomie",
+    "tags": ["dispositif_experimental", "randomisation", "plan"],
+    "frequence": 0.82,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelles analyses de sol avez-vous effectuées avant l'implantation de l'essai ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "agronomie",
+    "tags": ["analyse_sol", "fertilite", "preparation"],
+    "frequence": 0.78,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous géré la pression parasitaire durant votre expérimentation ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "agronomie",
+    "tags": ["parasites", "protection_cultures", "gestion"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels facteurs pédoclimatiques ont influencé vos résultats ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "agronomie",
+    "tags": ["pedoclimatique", "climat", "sol"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre itinéraire technique proposé est-il applicable par les petits agriculteurs ?",
+    "type": "pratique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "agronomie",
+    "tags": ["itineraire_technique", "applicabilite", "petits_agriculteurs"],
+    "frequence": 0.80,
+    "difficulte": 3
+  },
+  {
+    "question": "Quel test statistique avez-vous utilisé pour comparer les traitements (ANOVA, test de Tukey) ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "agronomie",
+    "tags": ["anova", "test_statistique", "comparaison"],
+    "frequence": 0.82,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre recherche contribue-t-elle à la sécurité alimentaire de la région ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "agronomie",
+    "tags": ["securite_alimentaire", "impact", "developpement"],
+    "frequence": 0.78,
+    "difficulte": 2
+  },
+  {
+    "question": "Avez-vous réalisé une analyse économique coût-bénéfice de l'itinéraire technique proposé ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "agronomie",
+    "tags": ["cout_benefice", "rentabilite", "analyse_economique"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous pris en compte la variabilité inter-parcellaire dans vos résultats ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "agronomie",
+    "tags": ["variabilite", "parcelle", "heterogeneite"],
+    "frequence": 0.65,
+    "difficulte": 4
+  },
+
+  {
+    "question": "Comment avez-vous construit votre grille d'analyse sociologique ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sociologie",
+    "tags": ["grille_analyse", "cadre_theorique", "construction"],
+    "frequence": 0.80,
+    "difficulte": 3
+  },
+  {
+    "question": "Quel paradigme sociologique avez-vous adopté : fonctionnalisme, interactionnisme, structuralisme ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "sociologie",
+    "tags": ["paradigme", "courant_sociologique", "positionnement"],
+    "frequence": 0.78,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous assuré la saturation théorique de vos entretiens ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "sociologie",
+    "tags": ["saturation", "entretiens", "qualitatif"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous géré votre posture de chercheur vis-à-vis de votre terrain ?",
+    "type": "ethique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "sociologie",
+    "tags": ["posture", "reflexivite", "terrain"],
+    "frequence": 0.70,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous traité la question de l'anonymisation des données qualitatives ?",
+    "type": "ethique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "sociologie",
+    "tags": ["anonymisation", "confidentialite", "ethique"],
+    "frequence": 0.75,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous codifié et analysé les données issues de vos entretiens semi-directifs ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sociologie",
+    "tags": ["codification", "analyse_contenu", "entretiens"],
+    "frequence": 0.80,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment les rapports de pouvoir sont-ils analysés dans votre étude ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sociologie",
+    "tags": ["pouvoir", "domination", "rapports_sociaux"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre étude prend-elle en compte les dimensions de genre ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "sociologie",
+    "tags": ["genre", "egalite", "perspective"],
+    "frequence": 0.62,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment les inégalités sociales sont-elles conceptualisées dans votre cadre théorique ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "sociologie",
+    "tags": ["inegalites", "stratification", "conceptualisation"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment la notion de représentations sociales est-elle mobilisée dans votre analyse ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sociologie",
+    "tags": ["representations_sociales", "moscovici", "analyse"],
+    "frequence": 0.65,
+    "difficulte": 3
+  },
+
+  {
+    "question": "Comment avez-vous analysé le jeu des acteurs politiques dans votre contexte d'étude ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sciences_politiques",
+    "tags": ["acteurs", "jeu_politique", "analyse"],
+    "frequence": 0.78,
+    "difficulte": 3
+  },
+  {
+    "question": "Quel cadre d'analyse des politiques publiques avez-vous utilisé ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "sciences_politiques",
+    "tags": ["politiques_publiques", "cadre_analyse", "methodologie"],
+    "frequence": 0.82,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous évalué l'efficacité de la politique publique étudiée ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "sciences_politiques",
+    "tags": ["efficacite", "evaluation", "politique_publique"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment la notion de gouvernance est-elle opérationnalisée dans votre étude ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "sciences_politiques",
+    "tags": ["gouvernance", "operationnalisation", "concept"],
+    "frequence": 0.70,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment votre analyse intègre-t-elle les dynamiques de décentralisation ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "sciences_politiques",
+    "tags": ["decentralisation", "collectivites", "dynamiques"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+
+  {
+    "question": "Comment avez-vous mesuré l'efficacité de votre stratégie de communication ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "communication",
+    "tags": ["efficacite", "mesure", "strategie"],
+    "frequence": 0.82,
+    "difficulte": 3
+  },
+  {
+    "question": "Quel modèle théorique de communication avez-vous mobilisé (Shannon, Jakobson, Lasswell) ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "communication",
+    "tags": ["modele_theorique", "fondements", "communication"],
+    "frequence": 0.75,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous analysé le discours médiatique autour de votre objet d'étude ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "communication",
+    "tags": ["analyse_discours", "medias", "semiologie"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels indicateurs avez-vous utilisés pour mesurer l'audience et l'engagement ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "communication",
+    "tags": ["audience", "engagement", "indicateurs"],
+    "frequence": 0.78,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment votre plan de communication intègre-t-il les canaux numériques et traditionnels ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "communication",
+    "tags": ["canaux", "numerique", "traditionnel"],
+    "frequence": 0.68,
+    "difficulte": 2
+  },
+
+  {
+    "question": "Comment avez-vous évalué l'impact environnemental de votre projet ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "environnement",
+    "tags": ["impact_environnemental", "evaluation", "eie"],
+    "frequence": 0.85,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels indicateurs de développement durable avez-vous retenus pour votre analyse ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "environnement",
+    "tags": ["developpement_durable", "indicateurs", "odd"],
+    "frequence": 0.78,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment votre étude prend-elle en compte les services écosystémiques ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "environnement",
+    "tags": ["services_ecosystemiques", "valorisation", "biodiversite"],
+    "frequence": 0.68,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous modélisé les scénarios de changement climatique dans votre analyse ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "environnement",
+    "tags": ["changement_climatique", "scenarios", "modelisation"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+  {
+    "question": "Quelle méthodologie avez-vous utilisée pour l'évaluation de l'empreinte carbone ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "environnement",
+    "tags": ["empreinte_carbone", "bilan", "methode"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment les populations locales ont-elles été impliquées dans votre démarche environnementale ?",
+    "type": "ethique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "environnement",
+    "tags": ["participation", "communautes", "inclusion"],
+    "frequence": 0.65,
+    "difficulte": 2
+  },
+
+  {
+    "question": "Comment avez-vous évalué le risque financier du portefeuille étudié ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "finance",
+    "tags": ["risque", "portefeuille", "evaluation"],
+    "frequence": 0.82,
+    "difficulte": 4
+  },
+  {
+    "question": "Quel modèle d'évaluation d'actifs avez-vous appliqué (CAPM, APT, Fama-French) ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "finance",
+    "tags": ["capm", "evaluation_actifs", "modele"],
+    "frequence": 0.78,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous analysé la structure du capital de l'entreprise étudiée ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "finance",
+    "tags": ["structure_capital", "endettement", "fonds_propres"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+  {
+    "question": "Quels ratios financiers avez-vous utilisés et comment les interprétez-vous ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "finance",
+    "tags": ["ratios", "analyse_financiere", "interpretation"],
+    "frequence": 0.85,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment le taux d'actualisation a-t-il été déterminé dans votre évaluation ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "finance",
+    "tags": ["taux_actualisation", "wacc", "evaluation"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+
+  {
+    "question": "Comment avez-vous segmenté votre marché cible et sur quels critères ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "marketing",
+    "tags": ["segmentation", "ciblage", "marche"],
+    "frequence": 0.85,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment le mix marketing (4P/7P) est-il adapté à votre contexte ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "marketing",
+    "tags": ["mix_marketing", "4p", "adaptation"],
+    "frequence": 0.82,
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle stratégie de positionnement de marque recommandez-vous et pourquoi ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "marketing",
+    "tags": ["positionnement", "marque", "strategie"],
+    "frequence": 0.78,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous mesuré la satisfaction et la fidélité client ?",
+    "type": "resultats",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "marketing",
+    "tags": ["satisfaction", "fidelite", "nps"],
+    "frequence": 0.75,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment le parcours client (customer journey) a-t-il été analysé et optimisé ?",
+    "type": "technique",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "marketing",
+    "tags": ["parcours_client", "customer_journey", "optimisation"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est votre stratégie de pricing et comment a-t-elle été déterminée ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "marketing",
+    "tags": ["pricing", "tarification", "strategie_prix"],
+    "frequence": 0.70,
+    "difficulte": 3
+  },
+
+  {
+    "question": "Comment votre revue de littérature couvre-t-elle les travaux les plus récents du domaine ?",
+    "type": "bibliographie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["revue_litterature", "actualite", "exhaustivite"],
+    "frequence": 0.85,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment articulez-vous la théorie et la pratique dans votre travail ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["theorie_pratique", "articulation", "coherence"],
+    "frequence": 0.82,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous assuré la rigueur méthodologique de votre recherche ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["rigueur", "methodologie", "scientifique"],
+    "frequence": 0.88,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous formulé vos hypothèses de recherche ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["hypotheses", "formulation", "recherche"],
+    "frequence": 0.82,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment justifiez-vous la taille et la composition de votre échantillon ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["echantillon", "taille", "representativite"],
+    "frequence": 0.80,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre problématique s'inscrit-elle dans les enjeux actuels de votre discipline ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["enjeux", "actualite", "pertinence_disciplinaire"],
+    "frequence": 0.85,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment avez-vous assuré la triangulation des données dans votre recherche ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["triangulation", "validite", "multi_sources"],
+    "frequence": 0.72,
+    "difficulte": 4
+  },
+  {
+    "question": "Quelle est la validité interne de votre dispositif de recherche ?",
+    "type": "methodologie",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["validite_interne", "biais", "controle"],
+    "frequence": 0.75,
+    "difficulte": 4
+  },
+  {
+    "question": "Comment avez-vous assuré la fidélité et la reproductibilité de vos mesures ?",
+    "type": "resultats",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["fidelite", "reproductibilite", "mesure"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Pourquoi avez-vous choisi une approche qualitative plutôt que quantitative, ou l'inverse ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["qualitatif", "quantitatif", "choix_methodologique"],
+    "frequence": 0.85,
+    "difficulte": 2
+  },
+  {
+    "question": "Comment les résultats de votre étude peuvent-ils être transférés à d'autres contextes ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["transferabilite", "generalisation", "contextes"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "En quoi votre cadre conceptuel est-il approprié pour traiter votre problématique ?",
+    "type": "technique",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["cadre_conceptuel", "adequation", "problematique"],
+    "frequence": 0.78,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment garantissez-vous l'objectivité de votre interprétation des résultats ?",
+    "type": "ethique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["objectivite", "interpretation", "biais_chercheur"],
+    "frequence": 0.72,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous traité les résultats qui contredisent vos hypothèses initiales ?",
+    "type": "argumentation",
+    "role": "rapporteur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["contradiction", "hypotheses", "honnetete_intellectuelle"],
+    "frequence": 0.75,
+    "difficulte": 3
+  },
+  {
+    "question": "En quoi votre mémoire apporte-t-il une plus-value par rapport aux travaux existants ?",
+    "type": "originalite",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["plus_value", "apport", "originalite"],
+    "frequence": 0.88,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment avez-vous défini et opérationnalisé les concepts clés de votre recherche ?",
+    "type": "methodologie",
+    "role": "examinateur",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["operationnalisation", "concepts", "definitions"],
+    "frequence": 0.78,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment les considérations éthiques ont-elles guidé vos choix méthodologiques ?",
+    "type": "ethique",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["ethique", "choix_methodologiques", "integrite"],
+    "frequence": 0.70,
+    "difficulte": 3
+  },
+  {
+    "question": "Comment votre travail de recherche pourrait-il influencer la pratique professionnelle ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["pratique_professionnelle", "influence", "application"],
+    "frequence": 0.75,
+    "difficulte": 2
+  },
+  {
+    "question": "Si vous deviez refaire cette recherche, que changeriez-vous dans votre approche ?",
+    "type": "argumentation",
+    "role": "president_jury",
+    "niveau": "master",
+    "domaine": "general",
+    "tags": ["retrospective", "amelioration", "reflexion"],
+    "frequence": 0.82,
+    "difficulte": 2
+  }
+]

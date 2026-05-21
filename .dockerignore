@@ -1,0 +1,13 @@
+# Fichiers à exclure du contexte de build Docker
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+chroma_data/
+uploads/
+logs/
+.git/
+.gitignore
+README.md
+test_document.pdf

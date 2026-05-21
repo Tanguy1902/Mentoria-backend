@@ -1,0 +1,45 @@
+# ============================================================
+# .gitignore Backend
+# ============================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environnement virtuel
+venv/
+.venv/
+env/
+ENV/
+
+# Variables d'environnement
+.env
+
+# Éditeurs / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Données locales ChromaDB
+chroma_data/
+
+# Fichiers uploadés
+uploads/
+
+# Journaux (logs)
+logs/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Fichiers de test
+test_document.pdf
