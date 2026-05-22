@@ -149,7 +149,8 @@ class ChromaVectorStore:
             collection = self.client.get_collection(name=collection_name)
             results = collection.query(
                 query_texts=[query_text],
-                n_results=min(n_results, collection.count()),
+                n_results=max(1, n_results),
+                include=["documents", "metadatas", "distances"],
             )
         except Exception as exc:
             logger.error("Vector search failed: %s", exc)

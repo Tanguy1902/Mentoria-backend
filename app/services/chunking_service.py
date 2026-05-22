@@ -3,7 +3,7 @@ Chunking service: text normalization, token-aware splitting with overlap.
 """
 
 import re
-import uuid
+from functools import lru_cache
 from dataclasses import dataclass
 
 import tiktoken
@@ -27,6 +27,7 @@ class TextChunk:
     metadata: dict
 
 
+@lru_cache(maxsize=8192)
 def _count_tokens(text: str) -> int:
     """Count the number of tokens in a text string."""
     return len(_encoding.encode(text))
@@ -120,7 +121,7 @@ def chunk_text(
                     TextChunk(
                         chunk_id=f"{document_id}_chunk_{chunk_index}",
                         text=chunk_text_content,
-                        token_count=_count_tokens(chunk_text_content),
+                        token_count=current_token_count,
                         chunk_index=chunk_index,
                         metadata={
                             "document_id": document_id,
@@ -156,7 +157,7 @@ def chunk_text(
                 TextChunk(
                     chunk_id=f"{document_id}_chunk_{chunk_index}",
                     text=chunk_text_content,
-                    token_count=_count_tokens(chunk_text_content),
+                    token_count=current_token_count,
                     chunk_index=chunk_index,
                     metadata={
                         "document_id": document_id,
@@ -189,7 +190,7 @@ def chunk_text(
             TextChunk(
                 chunk_id=f"{document_id}_chunk_{chunk_index}",
                 text=chunk_text_content,
-                token_count=_count_tokens(chunk_text_content),
+                token_count=current_token_count,
                 chunk_index=chunk_index,
                 metadata={
                     "document_id": document_id,

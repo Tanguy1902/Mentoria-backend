@@ -46,6 +46,10 @@ class Settings(BaseSettings):
 
     # --- RAG ---
     TOP_K_RESULTS: int = 5
+    ANALYSIS_CONTEXT_CHAR_LIMIT: int = 12000
+    ANALYSIS_REFERENCE_LIMIT: int = 5
+    CHAT_CONTEXT_CHAR_LIMIT: int = 5000
+    CHAT_HISTORY_TURNS: int = 6
 
     # --- Logging ---
     LOG_LEVEL: str = "INFO"

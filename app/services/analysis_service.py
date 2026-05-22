@@ -2,10 +2,13 @@
 Analysis service: RAG orchestration — retrieve, prompt, call LLM, parse results.
 """
 
+import time
 from dataclasses import dataclass, field
 
+import anyio
+
 from app.ai.llm_client import LLMClient
-from app.ai.prompts import SYSTEM_PROMPT, build_analysis_prompt
+from app.ai.prompts import build_analysis_prompt, build_system_prompt
 from app.config import get_settings
 from app.core.exceptions import AnalysisError, DocumentNotIndexedError
 from app.core.logging import get_logger
@@ -68,6 +71,50 @@ class AnalysisResult:
     chunks_used: int = 0
 
 
+def _limit_texts(texts: list[str], char_limit: int) -> list[str]:
+    """Trim a list of texts so the combined size stays under a character budget."""
+    limited: list[str] = []
+    current_size = 0
+
+    for text in texts:
+        if current_size >= char_limit:
+            break
+
+        remaining = char_limit - current_size
+        if len(text) > remaining:
+            trimmed = text[:remaining].rstrip()
+            if trimmed:
+                limited.append(f"{trimmed}...")
+            break
+
+        limited.append(text)
+        current_size += len(text)
+
+    return limited
+
+
+def _format_chat_history(chat_history: list[dict] | None, max_turns: int) -> str:
+    """Format a trimmed chat history for inclusion in the prompt."""
+    if not chat_history:
+        return "Aucun échange précédent."
+
+    recent_messages = chat_history[-(max_turns * 2):]
+    lines: list[str] = []
+    for message in recent_messages:
+        role = message.get("role", "user")
+        content = str(message.get("content", "")).strip()
+        if not content:
+            continue
+
+        if len(content) > 500:
+            content = content[:500].rstrip() + "..."
+
+        speaker = "Utilisateur" if role == "user" else "Jury"
+        lines.append(f"{speaker}: {content}")
+
+    return "\n".join(lines) if lines else "Aucun échange précédent."
+
+
 class AnalysisService:
     """Orchestrates the RAG analysis pipeline."""
 
@@ -107,14 +154,19 @@ class AnalysisService:
             AnalysisError: If the analysis pipeline fails.
         """
         settings = get_settings()
+        started_at = time.perf_counter()
         logger.info("Starting analysis for document: %s", document_id)
 
         # 1. Verify document exists
-        doc = get_document(document_id)
+        doc = await anyio.to_thread.run_sync(get_document, document_id)
 
         # 2. Verify document is indexed
         collection_name = f"doc_{document_id}"
-        if not self._vector_store.collection_exists(collection_name):
+        collection_exists = await anyio.to_thread.run_sync(
+            self._vector_store.collection_exists,
+            collection_name,
+        )
+        if not collection_exists:
             raise DocumentNotIndexedError(
                 f"Document '{document_id}' has not been indexed yet",
                 detail="Index the document first using POST /api/v1/index",
@@ -126,10 +178,11 @@ class AnalysisService:
             "argumentation, literature review, experimental design"
         )
 
-        retrieved = self._vector_store.query(
-            collection_name=collection_name,
-            query_text=search_query,
-            n_results=settings.TOP_K_RESULTS,
+        retrieved = await anyio.to_thread.run_sync(
+            self._vector_store.query,
+            collection_name,
+            search_query,
+            settings.TOP_K_RESULTS,
         )
 
         if not retrieved:
@@ -138,19 +191,30 @@ class AnalysisService:
                 detail="The document may not have been properly indexed.",
             )
 
-        context_chunks = [chunk.text for chunk in retrieved]
+        context_chunks = _limit_texts(
+            [chunk.text for chunk in retrieved],
+            settings.ANALYSIS_CONTEXT_CHAR_LIMIT,
+        )
         logger.info("Retrieved %d chunks for analysis", len(context_chunks))
 
         # 3.b Retrieve reference questions for inspiration
         reference_questions = []
-        if self._vector_store.collection_exists(REFERENCE_COLLECTION):
+        reference_collection_exists = await anyio.to_thread.run_sync(
+            self._vector_store.collection_exists,
+            REFERENCE_COLLECTION,
+        )
+        if reference_collection_exists:
             # We use the same query to find questions in the same domain/topic
-            ref_results = self._vector_store.query(
-                collection_name=REFERENCE_COLLECTION,
-                query_text=search_query,
-                n_results=10,  # Get up to 10 relevant questions
+            ref_results = await anyio.to_thread.run_sync(
+                self._vector_store.query,
+                REFERENCE_COLLECTION,
+                search_query,
+                settings.ANALYSIS_REFERENCE_LIMIT,
             )
-            reference_questions = [r.text for r in ref_results]
+            reference_questions = _limit_texts(
+                [r.text for r in ref_results],
+                settings.ANALYSIS_CONTEXT_CHAR_LIMIT // 3,
+            )
             logger.info("Retrieved %d reference questions for inspiration", len(reference_questions))
         else:
             logger.warning("Reference questions collection '%s' not found", REFERENCE_COLLECTION)
@@ -161,12 +225,16 @@ class AnalysisService:
             document_title=doc.filename,
             reference_questions=reference_questions,
             custom_query=custom_query,
+            include_rubric=include_rubric,
         )
+        system_prompt = build_system_prompt(include_rubric=include_rubric)
+        max_tokens = settings.LLM_MAX_TOKENS if include_rubric else min(settings.LLM_MAX_TOKENS, 2500)
 
         try:
             llm_response = await self._llm.generate_json(
-                system_prompt=SYSTEM_PROMPT,
+                system_prompt=system_prompt,
                 user_prompt=user_prompt,
+                max_tokens=max_tokens,
             )
         except Exception as exc:
             logger.error("LLM analysis failed: %s", exc)
@@ -192,6 +260,7 @@ class AnalysisService:
             ) from exc
 
         logger.info("Analysis complete for document: %s", document_id)
+        logger.info("Analysis pipeline finished in %.2fs", time.perf_counter() - started_at)
         return result
 
     async def chat_with_document(
@@ -202,32 +271,43 @@ class AnalysisService:
     ):
         """Interact with the document using the academic jury persona (streaming)."""
         settings = get_settings()
-        doc = get_document(document_id)
+        doc = await anyio.to_thread.run_sync(get_document, document_id)
         collection_name = f"doc_{document_id}"
 
-        if not self._vector_store.collection_exists(collection_name):
+        collection_exists = await anyio.to_thread.run_sync(
+            self._vector_store.collection_exists,
+            collection_name,
+        )
+        if not collection_exists:
             raise DocumentNotIndexedError(f"Document '{document_id}' not indexed")
 
         # 1. Retrieve context for the specific question
-        retrieved = self._vector_store.query(
-            collection_name=collection_name,
-            query_text=message,
-            n_results=5,
+        retrieved = await anyio.to_thread.run_sync(
+            self._vector_store.query,
+            collection_name,
+            message,
+            min(3, settings.TOP_K_RESULTS),
         )
-        context = "\n\n".join([r.text for r in retrieved])
+        context = "\n\n".join(
+            _limit_texts([r.text for r in retrieved], settings.CHAT_CONTEXT_CHAR_LIMIT)
+        )
+        history_block = _format_chat_history(chat_history, settings.CHAT_HISTORY_TURNS)
 
         # 2. Build chat prompt
         system_prompt = (
             "Vous êtes un membre du jury académique. Vous discutez avec l'étudiant "
             "de son travail basé sur les extraits fournis. Soyez exigeant, professionnel "
             "et précis. Répondez TOUJOURS en Français.\n\n"
-            f"CONTEXTE DU DOCUMENT :\n{context}"
+            f"DOCUMENT : {doc.filename}\n\n"
+            f"CONTEXTE DU DOCUMENT :\n{context}\n\n"
+            f"HISTORIQUE RÉCENT :\n{history_block}"
         )
         
         # 3. Stream from LLM
         async for chunk in self._llm.stream(
             system_prompt=system_prompt,
             user_prompt=message,
+            max_tokens=min(settings.LLM_MAX_TOKENS, 1500),
         ):
             yield chunk
 

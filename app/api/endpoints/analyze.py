@@ -33,7 +33,7 @@ async def chat_with_document(
         analysis_service.chat_with_document(
             document_id=request.document_id,
             message=request.message,
-            chat_history=[h.dict() for h in request.history]
+            chat_history=[h.model_dump() for h in request.history]
         ),
         media_type="text/event-stream"
     )

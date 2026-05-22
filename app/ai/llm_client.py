@@ -181,6 +181,7 @@ class LLMClient:
         system_prompt: str,
         user_prompt: str,
         model: str | None = None,
+        max_tokens: int | None = None,
     ) -> dict:
         """Generate a response and parse it as JSON.
 
@@ -195,7 +196,7 @@ class LLMClient:
         Raises:
             LLMError: If the response cannot be parsed as JSON.
         """
-        raw = await self.generate(system_prompt, user_prompt, model=model)
+        raw = await self.generate(system_prompt, user_prompt, model=model, max_tokens=max_tokens)
 
         # Strip markdown code fences if the LLM wraps the JSON
         cleaned = raw.strip()

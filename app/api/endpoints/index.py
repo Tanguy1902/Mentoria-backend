@@ -2,6 +2,9 @@
 POST /api/v1/index — Chunk and index a document into the vector store.
 """
 
+import time
+
+import anyio
 from fastapi import APIRouter, Depends
 
 from app.api.dependencies import get_vector_store
@@ -29,16 +32,18 @@ async def index_document(
 ) -> IndexResponse:
     """Chunk document text, generate embeddings, and store in ChromaDB."""
     logger.info("Index request for document: %s", request.document_id)
+    started_at = time.perf_counter()
 
     # Get the extracted text
-    text = document_service.get_document_text(request.document_id)
+    text = await anyio.to_thread.run_sync(document_service.get_document_text, request.document_id)
 
     # Chunk the text
-    chunks = chunk_text(
-        text=text,
-        document_id=request.document_id,
-        chunk_size=request.chunk_size,
-        chunk_overlap=request.chunk_overlap,
+    chunks = await anyio.to_thread.run_sync(
+        chunk_text,
+        text,
+        request.document_id,
+        request.chunk_size,
+        request.chunk_overlap,
     )
 
     if not chunks:
@@ -51,14 +56,16 @@ async def index_document(
 
     # Store chunks in vector database
     collection_name = f"doc_{request.document_id}"
-    count = vector_store.add_chunks(
-        collection_name=collection_name,
-        chunk_ids=[c.chunk_id for c in chunks],
-        documents=[c.text for c in chunks],
-        metadatas=[c.metadata for c in chunks],
+    count = await anyio.to_thread.run_sync(
+        vector_store.add_chunks,
+        collection_name,
+        [c.chunk_id for c in chunks],
+        [c.text for c in chunks],
+        [c.metadata for c in chunks],
     )
 
     logger.info("Indexed %d chunks for document %s", count, request.document_id)
+    logger.info("Indexing pipeline finished in %.2fs", time.perf_counter() - started_at)
 
     return IndexResponse(
         document_id=request.document_id,

@@ -2,12 +2,15 @@
 Document service: file upload handling, persistence, and text extraction orchestration.
 """
 
-import shutil
+import sqlite3
+import threading
 import uuid
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
+import aiofiles
+import anyio
 from fastapi import UploadFile
 
 from app.config import get_settings
@@ -25,6 +28,8 @@ from app.parsers.ppt_parser import PPTParser
 logger = get_logger(__name__)
 
 ALLOWED_EXTENSIONS = {".pdf", ".pptx", ".ppt"}
+UPLOAD_READ_CHUNK_SIZE = 1024 * 1024
+DOCUMENTS_DB_NAME = "documents.sqlite3"
 
 
 @dataclass
@@ -40,9 +45,117 @@ class DocumentInfo:
     text_path: str  # path to extracted text cache
 
 
-# In-memory document registry (production would use a database)
 _documents: dict[str, DocumentInfo] = {}
+_documents_loaded = False
+_documents_lock = threading.RLock()
 _parsers = [PDFParser(), PPTParser()]
+
+
+def _documents_db_path() -> Path:
+    """Path to the metadata database used for persisted document records."""
+    settings = get_settings()
+    return settings.upload_path / DOCUMENTS_DB_NAME
+
+
+def _open_documents_db() -> sqlite3.Connection:
+    """Open the persisted document metadata database and ensure the schema exists."""
+    db_path = _documents_db_path()
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    conn = sqlite3.connect(db_path, check_same_thread=False)
+    conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA synchronous=NORMAL")
+    conn.execute(
+        """
+        CREATE TABLE IF NOT EXISTS documents (
+            document_id TEXT PRIMARY KEY,
+            filename TEXT NOT NULL,
+            file_type TEXT NOT NULL,
+            file_path TEXT NOT NULL,
+            text_length INTEGER NOT NULL,
+            page_count INTEGER NOT NULL,
+            uploaded_at TEXT NOT NULL,
+            text_path TEXT NOT NULL
+        )
+        """
+    )
+    return conn
+
+
+def _row_to_document_info(row: sqlite3.Row) -> DocumentInfo:
+    """Convert a database row into a ``DocumentInfo`` instance."""
+    return DocumentInfo(
+        document_id=row["document_id"],
+        filename=row["filename"],
+        file_type=row["file_type"],
+        file_path=row["file_path"],
+        text_length=int(row["text_length"]),
+        page_count=int(row["page_count"]),
+        uploaded_at=row["uploaded_at"],
+        text_path=row["text_path"],
+    )
+
+
+def _ensure_documents_loaded() -> None:
+    """Load persisted document metadata into memory once per process."""
+    global _documents_loaded
+
+    if _documents_loaded:
+        return
+
+    with _documents_lock:
+        if _documents_loaded:
+            return
+
+        with _open_documents_db() as conn:
+            rows = conn.execute(
+                """
+                SELECT document_id, filename, file_type, file_path, text_length, page_count,
+                       uploaded_at, text_path
+                FROM documents
+                ORDER BY uploaded_at DESC
+                """
+            ).fetchall()
+
+        _documents.clear()
+        for row in rows:
+            doc_info = _row_to_document_info(row)
+            _documents[doc_info.document_id] = doc_info
+
+        _documents_loaded = True
+        logger.info("Loaded %d persisted document metadata record(s)", len(_documents))
+
+
+def _persist_document(doc_info: DocumentInfo) -> None:
+    """Upsert a document metadata record in the persistence layer."""
+    with _open_documents_db() as conn:
+        conn.execute(
+            """
+            INSERT INTO documents (
+                document_id, filename, file_type, file_path, text_length, page_count,
+                uploaded_at, text_path
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(document_id) DO UPDATE SET
+                filename=excluded.filename,
+                file_type=excluded.file_type,
+                file_path=excluded.file_path,
+                text_length=excluded.text_length,
+                page_count=excluded.page_count,
+                uploaded_at=excluded.uploaded_at,
+                text_path=excluded.text_path
+            """,
+            (
+                doc_info.document_id,
+                doc_info.filename,
+                doc_info.file_type,
+                doc_info.file_path,
+                doc_info.text_length,
+                doc_info.page_count,
+                doc_info.uploaded_at,
+                doc_info.text_path,
+            ),
+        )
+        conn.commit()
 
 
 def _get_parser(extension: str):
@@ -87,36 +200,59 @@ async def save_upload(file: UploadFile) -> DocumentInfo:
     upload_dir.mkdir(parents=True, exist_ok=True)
     file_path = upload_dir / filename
 
+    written_bytes = 0
     try:
-        # Read content and check size
-        content = await file.read()
-        if len(content) > settings.max_file_size_bytes:
-            raise FileTooLargeError(
-                f"File too large: {len(content) / (1024*1024):.1f}MB",
-                detail=f"Maximum allowed size: {settings.MAX_FILE_SIZE_MB}MB",
-            )
+        async with aiofiles.open(file_path, "wb") as output_file:
+            while True:
+                chunk = await file.read(UPLOAD_READ_CHUNK_SIZE)
+                if not chunk:
+                    break
 
-        with open(file_path, "wb") as f:
-            f.write(content)
-        logger.info("File saved: %s (%d bytes)", file_path, len(content))
+                written_bytes += len(chunk)
+                if written_bytes > settings.max_file_size_bytes:
+                    raise FileTooLargeError(
+                        f"File too large: {written_bytes / (1024*1024):.1f}MB",
+                        detail=f"Maximum allowed size: {settings.MAX_FILE_SIZE_MB}MB",
+                    )
+
+                await output_file.write(chunk)
+
+        logger.info("File saved: %s (%d bytes)", file_path, written_bytes)
     except (FileTooLargeError, UnsupportedFileTypeError):
+        if file_path.exists():
+            file_path.unlink(missing_ok=True)
         raise
     except Exception as exc:
+        if file_path.exists():
+            file_path.unlink(missing_ok=True)
         raise ParsingError(
             f"Failed to save uploaded file: {filename}",
             detail=str(exc),
         ) from exc
+    finally:
+        await file.close()
 
     # Extract text
     parser = _get_parser(extension)
     if parser is None:
         raise UnsupportedFileTypeError(f"No parser available for: {extension}")
 
-    parsed: ParsedDocument = parser.parse(file_path)
-
-    # Cache extracted text
     text_path = upload_dir / "extracted_text.txt"
-    text_path.write_text(parsed.text, encoding="utf-8")
+    try:
+        parsed: ParsedDocument = await anyio.to_thread.run_sync(parser.parse, file_path)
+
+        # Cache extracted text
+        async with aiofiles.open(text_path, "w", encoding="utf-8") as text_file:
+            await text_file.write(parsed.text)
+    except Exception as exc:
+        if text_path.exists():
+            text_path.unlink(missing_ok=True)
+        if file_path.exists():
+            file_path.unlink(missing_ok=True)
+        raise ParsingError(
+            f"Failed to parse uploaded file: {filename}",
+            detail=str(exc),
+        ) from exc
 
     # Store document info
     doc_info = DocumentInfo(
@@ -129,7 +265,10 @@ async def save_upload(file: UploadFile) -> DocumentInfo:
         uploaded_at=datetime.now(timezone.utc).isoformat(),
         text_path=str(text_path),
     )
-    _documents[document_id] = doc_info
+    _ensure_documents_loaded()
+    _persist_document(doc_info)
+    with _documents_lock:
+        _documents[document_id] = doc_info
 
     logger.info(
         "Upload complete: id=%s, pages=%d, chars=%d",
@@ -146,12 +285,33 @@ def get_document(document_id: str) -> DocumentInfo:
     Raises:
         DocumentNotFoundError: If the document ID is not found.
     """
-    if document_id not in _documents:
+    _ensure_documents_loaded()
+
+    cached = _documents.get(document_id)
+    if cached is not None:
+        return cached
+
+    with _open_documents_db() as conn:
+        row = conn.execute(
+            """
+            SELECT document_id, filename, file_type, file_path, text_length, page_count,
+                   uploaded_at, text_path
+            FROM documents
+            WHERE document_id = ?
+            """,
+            (document_id,),
+        ).fetchone()
+
+    if row is None:
         raise DocumentNotFoundError(
             f"Document not found: {document_id}",
             detail="Upload a document first using /api/v1/upload",
         )
-    return _documents[document_id]
+
+    doc_info = _row_to_document_info(row)
+    with _documents_lock:
+        _documents[document_id] = doc_info
+    return doc_info
 
 
 def get_document_text(document_id: str) -> str:
@@ -175,4 +335,5 @@ def get_document_text(document_id: str) -> str:
 
 def list_documents() -> list[DocumentInfo]:
     """Return all uploaded documents."""
+    _ensure_documents_loaded()
     return list(_documents.values())
